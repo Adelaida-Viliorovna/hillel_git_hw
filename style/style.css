@@ -1,0 +1,132 @@
+h1 {
+    color: #46A358;
+}
+.close_img {
+    margin: 10px;
+    position: absolute;
+    right: 0%;
+    top: 13px;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/close_img_1.png");
+    background-size: cover;
+}
+
+.close_img:hover {
+    background-image: url("../img/close_img_2.gif");
+}
+
+.alternative_register span {
+    font-size: 13px;
+    color: #3D3D3D;
+}
+
+.alternative_register button img {
+    width: 20px;
+    height: 20px;
+}
+
+body {
+    text-align: center;
+}
+
+.register_footer {
+    height: 10px;
+    background-color: #46A358;
+}
+
+button {
+    margin: 7.5px;
+    font-size: 13px;
+    width: 300px;
+    height: 40px;
+    text-decoration: none;
+    color: #727272;
+    background-color: #FFFFFF;
+    border-color: #A5A5A5;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+button:hover {
+    background-color: #46A358;
+    color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.login_or_register a {
+    font-size: 20px;
+}
+
+.login_or_register span {
+    font-size: 18px;
+    color: #3D3D3D;
+}
+
+.login {
+    color: #3D3D3D;
+}
+
+.register_active {
+    color: #46A358;
+    pointer-events: none;
+}
+
+input {
+    margin: 7.5px;
+    width: 300px;
+    height: 40px;
+    font-size: 14px;
+    border-color: #A5A5A5;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.register_input {
+    background-color: #46A358;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.register_input:hover {
+    border-color: #46A358;
+    background-color: #FFFFFF;
+    color: #46A358;
+}
+
+.password {
+    position: relative;
+}
+
+.password_control {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    top: 20px;
+}
+
+.password_control input {
+    display: none;
+}
+
+.password_control .eye_open {
+    display: none;
+}
+
+.password_control input:checked~.eye_close {
+    display: none;
+}
+
+.password_control input:checked~.eye_open {
+    display: block;
+}
+
+.password_control img {
+    width: 20px;
+    height: 20px;
+}
