@@ -306,6 +306,7 @@ input {
     color: #FFFFFF;
     background-color: #46A358;
     border-radius: 6px;
+    margin-bottom: 85px;
 }
 
 .left_text button:hover {
