@@ -317,21 +317,24 @@ input {
 
 .right_img {
     width: 42.25%;
-    display: flex;
+    /* display: flex; */
+    
 
     position: relative;
 }
 
 .plant_main_img_big {
     width: 100%;
-    display: flex;
+    position: absolute;
+    bottom: 0;
+    /* display: flex; */
 }
 
 .plant_main_img_small {
     width: 26.63%;
 
     position: absolute;
-    bottom: 6%;
+    bottom: 3.7%;
     left: 10.84%;
 }
 
