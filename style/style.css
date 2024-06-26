@@ -471,8 +471,6 @@ input {
     background-color: #46A358;
     padding: 6px 8px;
     top: 5.6%;
-    opacity: 0;
-    transition: opacity 0.5s ease;
 }
 
 .card:hover {
@@ -483,14 +481,14 @@ input {
     opacity: 100%;
 }
 
-.card:hover .plant_sale {
-    opacity: 100%;
-}
-
 .card .plant_text .plant_name {
     font-family: "Cera Pro", "Times New Roman";
     font-size: 16px;
     color: #3D3D3D;
+}
+
+.card .plant_text {
+    position: relative;
 }
 
 .card .plant_text .price {
@@ -498,6 +496,21 @@ input {
     font-size: 18px;
     font-weight: bold;
     color: #46A358;
+    display: flex;
+
+
+}
+
+.card .plant_text .old_price {
+    text-decoration: line-through;
+    font-family: "Cera Pro", "Times New Roman";
+    font-size: 18px;
+    font-weight: normal;
+    color: #A5A5A5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
 }
 
 .right_list .sort_link {
