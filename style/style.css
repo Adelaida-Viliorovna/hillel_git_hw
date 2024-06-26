@@ -487,9 +487,9 @@ input {
     color: #3D3D3D;
 }
 
-.card .plant_text {
+/* .card .plant_text {
     position: relative;
-}
+} */
 
 .card .plant_text .price {
     font-family: "Cera Pro", "Times New Roman";
@@ -510,7 +510,7 @@ input {
     width: 100%;
     display: flex;
     justify-content: center;
-    position: absolute;
+    /* position: absolute; */
 }
 
 .right_list .sort_link {
