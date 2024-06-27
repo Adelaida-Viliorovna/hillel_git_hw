@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration page</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/normalize.css">
+</head>
+
+<body class="registration">
+
+    <header class="register_header">
+
+        <div class="close_img">
+            <a href="../index.html">
+                <img src="../img/close_img_3.png" alt="close_img">
+            </a>
+        </div>
+
+        <div class="login_or_register">
+            <h2>
+                <a href="#" class="login">Login</a>
+                <span>|</span>
+                <a href="#" class="register_active">Register</a>
+            </h2>
+        </div>
+
+    </header>
+
+    <main class="register_main">
+
+        <form action="" class="register_form">
+            <label for="username">Enter your email and password to register.</label>
+            <br>
+            <input id="username" type="text" placeholder="Username" required>
+            <br>
+            <input type="email" placeholder="Enter your email address" required>
+            <br>
+            <div class="password">
+                <input type="password" id="password_input" placeholder="Password" required>
+                <label class="password_control">
+                    <input type="checkbox">
+                    <img src="../img/eye_close.png" alt="eye_close" class="eye_close">
+                    <img src="../img/eye_open.png" alt="eye_open" class="eye_open">
+                </label>
+            </div>
+            <input type="password" placeholder="Confirm Password" required>
+            <br>
+            <input class="register_input" type="submit" value="Register">
+        </form>
+
+        <div class="alternative_register">
+            <img src="../img/line_img.png" alt="line_img" class="line_img">
+            <span>Or register with</span>
+            <img src="../img/line_img.png" alt="line_img" class="line_img">
+            <br>
+            <button type="button" class="google">
+                <img src="../img/google_img.png" alt="google_img">
+                Continue with Google
+            </button>
+            <br>
+            <button type="button" class="facebook">
+                <img src="../img/facebook_img.png" alt="facebook_img">
+                Continue with Facebook
+            </button>
+        </div>
+
+    </main>
+    <footer class="register_footer"></footer>
+</body>
+
+</html>
