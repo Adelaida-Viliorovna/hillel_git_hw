@@ -266,6 +266,17 @@ input {
     height: 10px;
     text-align: end;
     opacity: 0;
+    position: relative;
+    transition: 0.5s ease;
+}
+
+.nav .menu_2 .img_1 {
+    opacity: 1;
+    width: 6px;
+    height: 10px;
+    text-align: end;
+    position: absolute;
+    right: 14px;
 }
 
 .nav .menu_2 a:hover {
@@ -282,6 +293,10 @@ input {
 
 .nav .menu_2 li:hover img {
     opacity: 100%;
+}
+
+.nav .menu_2 li:hover .img_1 {
+    opacity: 0;
 }
 
 .nav .menu_3 {
