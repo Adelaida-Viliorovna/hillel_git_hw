@@ -1188,6 +1188,11 @@ input {
     font-size: 14px;
     color: #3D3D3D;
     padding-top: 8px;
+    transition: 0.5s ease;
+}
+
+.navigation_social a:hover {
+    color: #46A358;
 }
 
 .navigation_social div {
