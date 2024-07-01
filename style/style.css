@@ -1137,6 +1137,7 @@ input {
     border-bottom-left-radius: 6px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    padding-left: 10px;
 }
 
 .newsletter .input_email button{
