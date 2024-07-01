@@ -600,7 +600,6 @@ input {
     cursor: pointer;
     position: relative;
     top: 50%; 
-    transform: translateY(-50%); 
 }
 
 .left_menu .menu .price_range input[type="range"]::-ms-thumb {
