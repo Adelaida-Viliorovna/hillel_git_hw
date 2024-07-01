@@ -1217,8 +1217,35 @@ input {
     background-color: transparent;
 }
 
-.navigation_social .social_button button>img {
-    height: 16px;
+.navigation_social .social_button .facebook {
+    background-image: url("../img/icon/facebook_icon.png");
+    background-size: 8px 16px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.navigation_social .social_button .instagram {
+    background-image: url("../img/icon/instagram_icon.png");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.navigation_social .social_button .twitter {
+    background-image: url("../img/icon/twitter_icon.png");
+    background-size: 16px 13px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.navigation_social .social_button .linkedin {
+    background-image: url("../img/icon/linkedin_icon.png");
+    background-size: 15.33px 16px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.navigation_social .social_button .youtube {
+    background-image: url("../img/icon/youtube_icon.png");
+    background-size: 18.67px 13.98px;
+    background-repeat: no-repeat;
+    background-position: 50%;
 }
 
 .navigation_social .social>img {
