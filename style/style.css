@@ -1167,9 +1167,12 @@ input {
 .contacts .contact_box {
     display: flex;
     flex-direction: row;
+    align-items: center;
     max-width: 17.5%;
     min-width: 195px;
+    position: relative;
 }
+
 
 .contacts .contact_box img {
     width: 20px;
