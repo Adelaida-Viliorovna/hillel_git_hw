@@ -206,10 +206,6 @@ input {
     width: 150px;
 }
 
-.logo img {
-    width: 100%;
-}
-
 .nav {
     width: 29.25%;
     min-width: 228px;
@@ -264,6 +260,7 @@ input {
     display: flex;
     flex-direction: row;
     align-items: center;
+    transition: 0.5s ease;
 }
 
 .nav .menu_2 a {
@@ -271,24 +268,6 @@ input {
     width: 100%;
     display: flex;
     align-items: center;
-}
-
-.nav .menu_2 li img {
-    width: 6px;
-    height: 10px;
-    text-align: end;
-    opacity: 0;
-    position: relative;
-    transition: 0.5s ease;
-}
-
-.nav .menu_2 .img_1 {
-    opacity: 1;
-    width: 6px;
-    height: 10px;
-    text-align: end;
-    position: absolute;
-    right: 14px;
 }
 
 .nav .menu_2 a:hover {
@@ -302,13 +281,11 @@ input {
     flex-direction: row;
     align-items: center;
 }
-
-.nav .menu_2 li:hover img {
-    opacity: 100%;
+.nav .menu_2 li:hover svg {
+    transform: rotate(180deg);
 }
-
-.nav .menu_2 li:hover .img_1 {
-    opacity: 0;
+.nav .menu_2 li:hover svg path{
+    fill: #FFFFFF;
 }
 
 .nav .menu_3 {
@@ -339,22 +316,26 @@ input {
 }
 
 .header_button .search {
-    background-image: url(../img/icon/search_icon.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
     width: 20px;
     height: 20px;
     border: none;
+    transition: 0.5s ease;
+}
+
+.header_button .search:hover svg path {
+    fill: #46A358;
 }
 
 .header_button .basket {
-    background-image: url(../img/icon/basket_icon.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
     width: 24px;
     height: 24px;
     border: none;
     position: relative;
+    transition: 0.5s ease;
+}
+
+.header_button .basket:hover svg path {
+    fill: #46A358;
 }
 
 .header_button p {
@@ -388,7 +369,9 @@ input {
     border: none;
     display: flex;
     justify-content: center;
+    gap: 3.3px;
     align-items: center;
+    transition: 0.5s ease;
 }
 
 .login_button a {
@@ -397,9 +380,17 @@ input {
     color: #FFFFFF;
 }
 
-.login_button img {
-    width: 20px;
-    height: 20px;
+.login_button button:hover {
+    background-color: transparent;
+    border: 1px solid #46A358;
+}
+
+.login_button button:hover a{
+    color: #46A358;
+}
+
+.login_button button:hover svg path{
+    stroke: #46A358;
 }
 
 .home_page header hr {
@@ -657,12 +648,14 @@ input {
     background-color: #46A358;
     margin-top: 16px;
     margin-left: 12px;
+    transition: 0.5s ease;
 }
 
 .left_menu .menu .price_range>button:hover{
     border: none;
-    background-color: #46A358;
-    color: #FFFFFF;
+    background-color: transparent;
+    color: #46A358;
+    border: 1px solid #46A358;
 }
 
 .left_menu .menu .price_range>p {
@@ -744,8 +737,8 @@ input {
     align-items: center;
 }
 
-.plant_img .plant_img_btn button img {
-    width: 57%;
+.plant_img .plant_img_btn button:hover svg path {
+    fill: #46A358;
 }
 
 .plant_img .plant_sale {
@@ -876,15 +869,14 @@ input {
     pointer-events: none;
 }
 
-.page_number img {
-    width: 18px;
-    height: 18px;
-}
-
 .page_number button:hover {
     border: none;
     background-color: #46A358;
     color: #FFFFFF;
+}
+
+.page_number button:hover svg path {
+    stroke: #FFFFFF;
 }
 
 /* --- main proposition and blog --- */
@@ -943,6 +935,7 @@ input {
     font-size: 14px;
     display: flex;
     justify-content: center;
+    gap: 3.8px;
     align-items: center;
     margin-left: auto;
     transition: 0.5s ease;
@@ -954,9 +947,8 @@ input {
     color: #46A358;
 }
 
-.prop_text button img {
-    width: 18px;
-    height: 18px;
+.prop_text button:hover svg path {
+    stroke: #46A358;
 }
 
 /* --- blogs --- */
@@ -1036,12 +1028,17 @@ input {
     align-items: center;
 }
 
+svg path {
+    transition: 0.5s ease;
+}
+
 .blogs .blg_card .blg .blg_more_link a {
     font-family: 'Cera Pro';
     font-weight: bold;
     font-size: 14px;
     color: #3D3D3D;
     display: flex;
+    gap: 3.8px;
     align-items: center;
     transition: 0.5s ease;
 }
@@ -1050,23 +1047,8 @@ input {
     color: #46A358;
 }
 
-.blogs .blg_card .blg .blg_more_link a::after {
-    content: "";
-    width: 16px;
-    height: 16px;
-    background-image: url("../img/read_more_img.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.5s ease;
-}
-
-.blogs .blg_card .blg .blg_more_link a:hover::after {
-    content: "";
-    width: 16px;
-    height: 16px;
-    background-image: url("../img/read_more_img_grn.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+.blogs .blg_card .blg .blg_more_link a:hover svg path {
+    fill: #46A358;
 }
 
 /* --- footer --- */
@@ -1157,7 +1139,6 @@ input {
 .contacts {
     background: linear-gradient(to right, #EDF6EF, #52C368);
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 27px 1.92%;
     flex-wrap: wrap;
@@ -1166,25 +1147,40 @@ input {
 .contacts .contact_box {
     display: flex;
     flex-direction: row;
+    gap: 10px;
     align-items: center;
     max-width: 17.5%;
     min-width: 195px;
-    position: relative;
 }
 
+.contacts .location {
+    margin-left: 9%;
+}
+.contacts .message {
+    margin-left: 7.25%;
+}
+.contacts .calling {
+    margin-left: 6.083%;
+}
 
-.contacts .contact_box img {
-    width: 20px;
-    height: 20px;
-    margin: 9px;
+.contacts .contact_box p {
+    padding: 0;
+}
+
+.contacts .contact_box a {
+    font-size: 14px;
+    color: #3D3D3D;
 }
 
 .navigation_social {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 15%;
     padding: 30px 25px;
     flex-wrap: wrap;
+}
+
+.navigation_social h3 {
+    padding: 0;
 }
 
 .navigation_social a{
@@ -1219,41 +1215,19 @@ input {
     margin: 20px 10px 30px 0;
     background-color: transparent;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navigation_social .social_button button:hover {
-    background-color: transparent;
+    background-color: rgba(70, 163, 88, 0.6);
+    border: none;
 }
 
-.navigation_social .social_button .facebook {
-    background-image: url("../img/icon/facebook_icon.png");
-    background-size: 8px 16px;
-    background-repeat: no-repeat;
-    background-position: 50%;
-}
-.navigation_social .social_button .instagram {
-    background-image: url("../img/icon/instagram_icon.png");
-    background-size: 16px 16px;
-    background-repeat: no-repeat;
-    background-position: 50%;
-}
-.navigation_social .social_button .twitter {
-    background-image: url("../img/icon/twitter_icon.png");
-    background-size: 16px 13px;
-    background-repeat: no-repeat;
-    background-position: 50%;
-}
-.navigation_social .social_button .linkedin {
-    background-image: url("../img/icon/linkedin_icon.png");
-    background-size: 15.33px 16px;
-    background-repeat: no-repeat;
-    background-position: 50%;
-}
-.navigation_social .social_button .youtube {
-    background-image: url("../img/icon/youtube_icon.png");
-    background-size: 18.67px 13.98px;
-    background-repeat: no-repeat;
-    background-position: 50%;
+.navigation_social .social_button button:hover svg path {
+    fill: #FFFFFF;
+    fill-opacity: 1;
 }
 
 .navigation_social .social>img {
