@@ -1136,6 +1136,13 @@ svg path {
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
     cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.newsletter .input_email button:hover {
+    background-color: #FFFFFF;
+    border: 1px solid #46A358;
+    color: #46A358;
 }
 
 .contacts {
