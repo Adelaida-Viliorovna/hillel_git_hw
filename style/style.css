@@ -126,6 +126,10 @@ a {
     pointer-events: none;
 }
 
+.register_form label {
+    font-size: 16px;
+}
+
 input {
     font-family: "Cera Pro", "Times New Roman";
     margin: 7.5px;
