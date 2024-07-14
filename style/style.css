@@ -28,11 +28,18 @@ button {
 }
 
 /* --- registration page style --- */
+
+.registration .preloader::after {
+    bottom: 50%;
+    z-index: 10;
+}
+
 .register_header {
     width: 500px;
     margin: 0 auto;
     position: relative;
 }
+
 .register_main {
     width: 500px;
     margin: 0 auto;
@@ -163,11 +170,36 @@ a {
     position: relative;
 }
 
-.password svg {
+.password .checkbox {
+    position: relative;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.custom_check_icon_password {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    cursor: pointer;
+    top: calc(50% - 11px);
+    right: calc(50% - 150px);
+    background-image: url("../img/icon/password_control.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.custom_checkbox input:checked~.custom_check_icon_password {
+    background: radial-gradient(#52C368, #FFFFFF);
+    border-radius: 50%;
+}
+
+/* .password svg {
     position: absolute;
     top: 20px;
     right: 110px;
-}
+} */
 
 /* --- index page style --- */
 
@@ -278,10 +310,12 @@ a {
     flex-direction: row;
     align-items: center;
 }
+
 .nav .menu_2 li:hover svg {
     transform: rotate(180deg);
 }
-.nav .menu_2 li:hover svg path{
+
+.nav .menu_2 li:hover svg path {
     fill: #FFFFFF;
 }
 
@@ -348,10 +382,11 @@ a {
     right: -6px;
 }
 
-.header_button .search:hover{
+.header_button .search:hover {
     background-color: transparent;
 }
-.header_button .basket:hover{
+
+.header_button .basket:hover {
     background-color: transparent;
 }
 
@@ -384,11 +419,11 @@ a {
     border: 1px solid #46A358;
 }
 
-.login_button button:hover a{
+.login_button button:hover a {
     color: #46A358;
 }
 
-.login_button button:hover svg path{
+.login_button button:hover svg path {
     stroke: #46A358;
 }
 
@@ -471,7 +506,7 @@ a {
 }
 
 .plant_main_img_big {
-    width: 100%;   
+    width: 100%;
 }
 
 .plant_main_img_small {
@@ -507,7 +542,7 @@ a {
     font-size: 18px;
 }
 
-.left_menu .menu .active_category{
+.left_menu .menu .active_category {
     pointer-events: none;
     color: #46A358;
     font-weight: bold;
@@ -542,9 +577,12 @@ a {
     height: 4px;
     margin: 20px 0 20px 12px;
 
-    -webkit-appearance: none; /* Вимкнути стандартний вигляд для Webkit браузерів */
-    -moz-appearance: none; /* Вимкнути стандартний вигляд для Firefox */
-    appearance: none; /* Вимкнути стандартний вигляд */
+    -webkit-appearance: none;
+    /* Вимкнути стандартний вигляд для Webkit браузерів */
+    -moz-appearance: none;
+    /* Вимкнути стандартний вигляд для Firefox */
+    appearance: none;
+    /* Вимкнути стандартний вигляд */
 }
 
 /* Стилізація доріжки */
@@ -571,7 +609,8 @@ a {
 
 /* Стилізація повзунка */
 .left_menu .menu .price_range input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Вимкнути стандартний вигляд для Webkit браузерів */
+    -webkit-appearance: none;
+    /* Вимкнути стандартний вигляд для Webkit браузерів */
     width: 16px;
     height: 16px;
     background: #4CAF50;
@@ -589,18 +628,18 @@ a {
     border-radius: 50%;
     cursor: pointer;
     position: relative;
-    top: 50%; 
+    top: 50%;
 }
 
 .left_menu .menu .price_range input[type="range"]::-ms-thumb {
     width: 16px;
     height: 16px;
     background: #4CAF50;
-    border-radius: 50%; 
+    border-radius: 50%;
     cursor: pointer;
     position: relative;
-    top: 50%; 
-    transform: translateY(-50%); 
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .price_range form {
@@ -650,7 +689,7 @@ a {
     transition: 0.5s ease;
 }
 
-.left_menu .menu .price_range>button:hover{
+.left_menu .menu .price_range>button:hover {
     border: none;
     background-color: transparent;
     color: #46A358;
@@ -663,7 +702,7 @@ a {
     margin-left: 12px;
 }
 
-.left_menu .menu .price_range>p>span{
+.left_menu .menu .price_range>p>span {
     color: #46A358;
     font-weight: bold;
 }
@@ -1057,20 +1096,21 @@ svg path {
     margin: 0 auto;
 }
 
-.home_page footer h3{
+.home_page footer h3 {
     font-size: 18px;
     font-weight: bold;
     color: #3D3D3D;
     padding-top: 3px;
 }
 
-.home_page footer p{
+.home_page footer p {
     font-size: 14px;
     color: #3D3D3D;
     padding-top: 8px;
 }
 
-.about_newsletter, .navigation_social {
+.about_newsletter,
+.navigation_social {
     background-color: #FBFBFB;
 }
 
@@ -1094,7 +1134,7 @@ svg path {
 }
 
 .newsletter {
-    
+
     width: 29.5%;
     min-width: 275px;
 }
@@ -1120,7 +1160,7 @@ svg path {
     padding-left: 10px;
 }
 
-.newsletter .input_email button{
+.newsletter .input_email button {
     border: none;
     color: #FFFFFF;
     background-color: #46A358;
@@ -1162,9 +1202,11 @@ svg path {
 .contacts .location {
     margin-left: 9%;
 }
+
 .contacts .message {
     margin-left: 7.25%;
 }
+
 .contacts .calling {
     margin-left: 6.083%;
 }
@@ -1189,7 +1231,7 @@ svg path {
     padding: 0;
 }
 
-.navigation_social a{
+.navigation_social a {
     font-size: 14px;
     color: #3D3D3D;
     padding-top: 8px;
@@ -1212,7 +1254,7 @@ svg path {
     flex-shrink: 0;
 }
 
-.navigation_social .social_button button{
+.navigation_social .social_button button {
     width: 30px;
     height: 30px;
     border: 1px solid;
@@ -1260,8 +1302,40 @@ footer hr {
     padding: 10px;
 }
 
-.checkbox_and_preloader h3{
+.checkbox_and_preloader h3 {
     color: #46A358;
+}
+
+.checkbox_and_preloader a {
+    color: #46A358;
+    padding: 4px;
+    background-color: #FFFFFF;
+    border: 1px solid #46A358;
+    border-radius: 6px;
+    position: relative;
+}
+
+.checkbox_and_preloader a::before {
+    content: "";
+    width: 68px;
+    height: 26px;
+    border-radius: 5px;
+    position: absolute;
+    left: calc(-100% - 4px);
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: 0.5s all ease;
+}
+
+.checkbox_and_preloader a:hover {
+    color: #FFFFFF;
+    z-index: 1;
+}
+
+.checkbox_and_preloader a:hover::before {
+    left: -2px;
+    z-index: -1;
+    background: #46A358;
 }
 
 .custom_checkbox {
@@ -1273,14 +1347,14 @@ footer hr {
 
 .custom_checkbox input {
     position: relative;
-    /* display: none; */
+    display: none;
 }
 
 .custom_check_icon_1::before {
     display: none;
 }
 
-.custom_checkbox input:checked ~.custom_check_icon_1::before {
+.custom_checkbox input:checked~.custom_check_icon_1::before {
     display: block;
 }
 
@@ -1319,7 +1393,7 @@ footer hr {
     position: absolute;
     width: 10px;
     height: 10px;
-    background: radial-gradient(#52C368, #EDF6EF);
+    background: radial-gradient(#52C368, #FFFFFF);
     top: 50%;
     left: 2px;
     transform: translate(0, -50%);
@@ -1327,49 +1401,79 @@ footer hr {
     transition: 0.5s all ease;
 }
 
-.custom_checkbox input:checked ~.custom_check_icon_2::before {
-    background: radial-gradient(#EDF6EF, #52C368);
+.custom_checkbox input:checked~.custom_check_icon_2::before {
+    background: radial-gradient(#FFFFFF, #52C368);
     display: block;
     transform: translate(16px, -50%);
 }
 
-.custom_checkbox input:checked ~.custom_check_icon_2 {
-    border: #FFFFFF;
+.custom_checkbox input:checked~.custom_check_icon_2 {
+    border: none;
     background-color: #52C368;
 }
 
 .custom_check_icon_3 {
     position: relative;
     border: 1px solid #46A358;
-    width: 30px;
-    height: 14px;
+    width: 32px;
+    height: 10px;
     border-radius: 7px;
     background-color: #FFFFFF;
 }
 
-/* .custom_check_icon_3::before {
+.custom_check_icon_3::before {
     content: "";
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 18px;
+    height: 18px;
     background-image: url("../img/icon_for_hw13/leaf_1.svg");
     top: 50%;
-    left: 2px;
+    left: -2px;
     transform: translate(0, -50%);
+    background-size: contain;
+    background-repeat: no-repeat;
     display: block;
     transition: 0.5s all ease;
 }
 
-.custom_checkbox input:checked ~.custom_check_icon_3::before {
-    background: radial-gradient(#EDF6EF, #52C368);
+.custom_checkbox input:checked~.custom_check_icon_3::before {
+    background-image: url("../img/icon_for_hw13/leaf_2.svg");
     display: block;
-    transform: translate(16px, -50%);
+    transform: translate(16px, -50%) rotate(360deg);
 }
 
-.custom_checkbox input:checked ~.custom_check_icon_3 {
-    border: #FFFFFF;
-    background-color: #52C368;
-} */
+.preloader::after {
+    position: absolute;
+    top: 0;
+    bottom: 4%;
+    right: 0;
+    left: 0;
+    content: "";
+    display: block;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    background: url(../img/icon_for_hw13/dual_ring.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: rotating 1.1s linear infinite;
+}
 
+.preloader a {
+    color: #46A358;
+    padding: 4px;
+    background-color: #FFFFFF;
+    border: 1px solid #46A358;
+    border-radius: 6px;
+}
 
-/* <!-- --- home work 13 --- --> */
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+    /* <!-- --- home work 13 --- --> */
