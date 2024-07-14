@@ -1386,6 +1386,7 @@ footer hr {
     height: 14px;
     border-radius: 7px;
     background-color: #FFFFFF;
+    transition: 0.5s all ease;
 }
 
 .custom_check_icon_2::before {
