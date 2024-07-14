@@ -1276,11 +1276,11 @@ footer hr {
     /* display: none; */
 }
 
-.custom_check_icon::before {
+.custom_check_icon_1::before {
     display: none;
 }
 
-.custom_checkbox input:checked ~.custom_check_icon::before {
+.custom_checkbox input:checked ~.custom_check_icon_1::before {
     display: block;
 }
 
@@ -1327,15 +1327,49 @@ footer hr {
     transition: 0.5s all ease;
 }
 
-.custom_checkbox input:checked ~.custom_check_icon::before {
+.custom_checkbox input:checked ~.custom_check_icon_2::before {
     background: radial-gradient(#EDF6EF, #52C368);
     display: block;
     transform: translate(16px, -50%);
 }
 
-.custom_checkbox input:checked ~.custom_check_icon {
+.custom_checkbox input:checked ~.custom_check_icon_2 {
     border: #FFFFFF;
     background-color: #52C368;
 }
+
+.custom_check_icon_3 {
+    position: relative;
+    border: 1px solid #46A358;
+    width: 30px;
+    height: 14px;
+    border-radius: 7px;
+    background-color: #FFFFFF;
+}
+
+.custom_check_icon_3::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(#52C368, #EDF6EF);
+    top: 50%;
+    left: 2px;
+    transform: translate(0, -50%);
+    display: block;
+    transition: 0.5s all ease;
+}
+
+.custom_checkbox input:checked ~.custom_check_icon_3::before {
+    background: radial-gradient(#EDF6EF, #52C368);
+    display: block;
+    transform: translate(16px, -50%);
+}
+
+.custom_checkbox input:checked ~.custom_check_icon_3 {
+    border: #FFFFFF;
+    background-color: #52C368;
+}
+
 
 /* <!-- --- home work 13 --- --> */
