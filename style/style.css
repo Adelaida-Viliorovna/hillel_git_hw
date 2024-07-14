@@ -1347,12 +1347,12 @@ footer hr {
     background-color: #FFFFFF;
 }
 
-.custom_check_icon_3::before {
+/* .custom_check_icon_3::before {
     content: "";
     position: absolute;
     width: 10px;
     height: 10px;
-    background: radial-gradient(#52C368, #EDF6EF);
+    background-image: url("../img/icon_for_hw13/leaf_1.svg");
     top: 50%;
     left: 2px;
     transform: translate(0, -50%);
@@ -1369,7 +1369,7 @@ footer hr {
 .custom_checkbox input:checked ~.custom_check_icon_3 {
     border: #FFFFFF;
     background-color: #52C368;
-}
+} */
 
 
 /* <!-- --- home work 13 --- --> */
