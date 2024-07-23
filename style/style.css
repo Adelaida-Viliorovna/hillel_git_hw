@@ -521,13 +521,14 @@ a {
 
 .main_content {
     display: flex;
+    margin-top: 50px;
     
 }
 
 .left_menu {
     width: 25%;
     vertical-align: top;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     margin-right: 4.16%;
     display: flex;
     flex-direction: column;
@@ -721,7 +722,7 @@ a {
 
 .right_list {
     width: 69.4%;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1027,13 +1028,13 @@ a {
 .blogs .blg_card {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    
 }
 
 .blogs .blg_card .blg {
     width: 22.333%;
     min-width: 140px;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
 }
 
 .blogs .blg_card .blg .blg_img img {
@@ -1301,6 +1302,8 @@ footer hr {
     align-items: center;
     text-align: center;
     padding: 10px;
+    flex-wrap: wrap;
+    gap: 10px
 }
 
 .checkbox_and_preloader h3 {
@@ -1529,14 +1532,15 @@ footer hr {
         top: 0;
     }
 
-    
-
     .search_basket {
         width: calc(100% - 110px);
         display: flex;
         justify-content: space-around;
     }
 
+    .card.sale_banner {
+        display: none;
+    }
 
     @media screen and (max-width: 800px) {
         .burger_menu {
@@ -1554,6 +1558,10 @@ footer hr {
             width: 90px;  
             padding: 5px;     
         }
+
+        .burger_menu.active_burger + .nav nav li {
+            padding: 6px 0;
+        }
     
         .burger_menu.active_burger + .nav nav .header_main_menu {
             flex-direction: column;
@@ -1561,25 +1569,111 @@ footer hr {
 
         .burger_menu.active_burger + .nav nav .menu_2 {
             top: 0;
-            left: 90px;
+            left: 100%;
+            padding: 6px;
+        }
+
+        .burger_menu.active_burger + .nav nav .menu_2 .menu_3 {
+            left: 0;
+            top: 100%;
+            padding: 6px;
         }
     
         .burger_menu + .nav {
             display: none;
         }
-        /* .nav {
-            display: none;
-        }
-        .menu {
-            display: none;
-        } */
+        
         .top {
             flex-direction: column;
         }
         .left_text,.right_img {
             width: 100%;
         }
-        
+
+        .burger_menu + .left_menu {
+            display: none;
+        }
+
+        .right_list {
+            width: 90%;
+        }
+
+        .sale_banner {
+            display: none;
+        }
+
+        .card.sale_banner {
+            display: block;
+        }
+
+        .main_content {
+            justify-content: space-between;
+        }
+
+        .sort_link {
+            gap: 12px
+        }
+
+        .sort_list {
+            flex-direction: column;
+        }
+
+        .main_content {
+            position: relative;
+        }
+
+        .burger_menu.active_burger + .left_menu{
+            position: absolute;
+            display: block;
+            z-index: 10;
+            top: 12px;
+            width: 50%;
+        }
+
+        .burger_menu.active_burger + .left_menu .menu {
+            background-color: #f5f5f5;
+        }
+        .contacts {
+            justify-content: flex-start;
+            text-align: start;
+            flex-direction: column;
+        }
+        .contacts .location {
+            margin: 5px 0;
+            margin-left: 0;
+        }
+
+        .contacts .message {
+            margin: 5px 0;
+            margin-left: 0;
+        }
+
+        .contacts .calling {
+            margin: 5px 0;
+            margin-left: 0;
+        }
+
+        .newsletter {
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .navigation_social {
+            gap: 12px;
+        }
+
+        .blogs .blg_card {
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .blogs .blg_card .blg{
+            min-width: 220px;
+        }
+
+        .prop {
+            margin-bottom: 4px;
+        }
+
       }
 
       @media screen and (max-width: 600px) {
@@ -1602,10 +1696,26 @@ footer hr {
         .burger_menu.active_burger + .nav {
             top: 120px;
         }
+
+        .blogs .blg_card .blg{
+            min-width: 200px;
+        }
         
       }
       @media screen and (max-width: 450px){
         html {
             display: flex;
+        }
+
+        .burger_menu.active_burger + .nav {
+            top: 130px;
+        }
+
+        .blogs .blg_card .blg{
+            width: 90%;
+        }
+
+        .burger_menu.active_burger + .left_menu {
+            width: 80%;
         }
       }
