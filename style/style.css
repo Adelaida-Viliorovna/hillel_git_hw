@@ -1751,7 +1751,7 @@ footer hr {
     }
 
     .blogs .blg_card .blg {
-        min-width: 200px;
+        min-width: 45%;
     }
 
     .register_header {
@@ -1856,7 +1856,7 @@ footer hr {
     }
 
     .prop img {
-        width: 150%;
+        width: 120%;
         vertical-align: bottom;
 
         z-index: 1;
