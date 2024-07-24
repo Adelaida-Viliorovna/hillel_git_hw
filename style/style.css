@@ -49,7 +49,7 @@ hr {
 .register_main {
     width: 500px;
     margin: 0 auto;
-    
+
 }
 
 .registration {
@@ -521,7 +521,7 @@ a {
 .main_content {
     display: flex;
     margin-top: 50px;
-    
+
 }
 
 .left_menu {
@@ -1027,7 +1027,7 @@ a {
 .blogs .blg_card {
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .blogs .blg_card .blg {
@@ -1480,364 +1480,375 @@ footer hr {
         transform: rotate(360deg);
     }
 }
-    /* <!-- --- home work 13 --- --> */
 
+/* <!-- --- home work 13 --- --> */
+
+.burger_menu {
+    display: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.burger_menu span {
+    width: 20px;
+    height: 2px;
+    background-color: #46A358;
+    display: block;
+    position: relative;
+    transition: 0.5s ease;
+}
+
+.burger_menu span::after {
+    width: 20px;
+    height: 2px;
+    background-color: #46A358;
+    position: absolute;
+    top: -5px;
+    content: "";
+    transition: 0.5s ease;
+}
+
+.burger_menu span::before {
+    width: 20px;
+    height: 2px;
+    background-color: #46A358;
+    position: absolute;
+    top: 5px;
+    content: "";
+    transition: 0.5s ease;
+}
+
+.burger_menu.active_burger span {
+    background-color: transparent;
+}
+
+.burger_menu.active_burger span::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.burger_menu.active_burger span::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.search_basket {
+    width: calc(100% - 110px);
+    display: flex;
+    justify-content: space-around;
+}
+
+.card.sale_banner {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
     .burger_menu {
-        display: none;
-        cursor: pointer;
-        margin-bottom: 10px;
-    }
-    
-    .burger_menu span {
-        width: 20px;
-        height: 2px;
-        background-color: #46A358;
         display: block;
-        position: relative;
-        transition: 0.5s ease;
+        order: -1;
     }
-    
-    .burger_menu span::after {
-        width: 20px;
-        height: 2px;
-        background-color: #46A358;
+
+    .burger_menu.active_burger+.nav {
         position: absolute;
-        top: -5px;
-        content: "";
-        transition: 0.5s ease;
-    }
-    
-    .burger_menu span::before {
-        width: 20px;
-        height: 2px;
-        background-color: #46A358;
-        position: absolute;
-        top: 5px;
-        content: "";
-        transition: 0.5s ease;
+        display: block;
+        top: 90px;
     }
 
-    .burger_menu.active_burger span {
-        background-color: transparent;
+    .burger_menu.active_burger+.nav nav {
+        background-color: #EDF6EE;
+        width: 90px;
+        padding: 5px;
     }
 
-    .burger_menu.active_burger span::after {
-        transform: rotate(45deg);
+    .burger_menu.active_burger+.nav nav li {
+        padding: 6px 0;
+    }
+
+    .burger_menu.active_burger+.nav nav .header_main_menu {
+        flex-direction: column;
+    }
+
+    .burger_menu.active_burger+.nav nav .menu_2 {
         top: 0;
+        left: 100%;
     }
 
-    .burger_menu.active_burger span::before {
-        transform: rotate(-45deg);
-        top: 0;
+    .burger_menu.active_burger+.nav nav .menu_2 .menu_3 {
+        left: 0;
+        top: 100%;
     }
 
-    .search_basket {
-        width: calc(100% - 110px);
-        display: flex;
-        justify-content: space-around;
+    .burger_menu.active_burger+.nav nav .menu_2 li {
+        padding: 6px;
+    }
+
+    .nav nav .menu_2 li svg {
+        transform: rotate(90deg);
+    }
+
+    .nav nav .menu_2 li:hover svg {
+        transform: rotate(-90deg);
+    }
+
+    .burger_menu+.nav {
+        display: none;
+    }
+
+    .top {
+        flex-direction: column;
+    }
+
+    .left_text,
+    .right_img {
+        width: 100%;
+    }
+
+    .burger_menu+.left_menu {
+        display: none;
+    }
+
+    .right_list {
+        width: 90%;
+    }
+
+    .sale_banner {
+        display: none;
     }
 
     .card.sale_banner {
+        display: block;
+        width: 60%;
+        order: 1;
+    }
+
+    .main_content {
+        justify-content: space-between;
+    }
+
+    .sort_link {
+        gap: 12px
+    }
+
+    .sort_list {
+        flex-direction: column;
+    }
+
+    .main_content {
+        position: relative;
+    }
+
+    .burger_menu.active_burger+.left_menu {
+        position: absolute;
+        display: block;
+        z-index: 10;
+        top: 12px;
+        width: 50%;
+    }
+
+    .burger_menu.active_burger+.left_menu .menu {
+        background-color: #f5f5f5;
+    }
+
+    .contacts {
+        justify-content: flex-start;
+        text-align: start;
+        flex-direction: column;
+    }
+
+    .contacts .location {
+        margin: 5px 0;
+        margin-left: 0;
+    }
+
+    .contacts .message {
+        margin: 5px 0;
+        margin-left: 0;
+    }
+
+    .contacts .calling {
+        margin: 5px 0;
+        margin-left: 0;
+    }
+
+    .newsletter {
+        margin-top: 15px;
+        min-width: 100%;
+    }
+
+    .about_newsletter {
+        padding: 2px;
+    }
+
+    .navigation_social {
+        gap: 12px;
+    }
+
+    .blogs .blg_card {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .blogs .blg_card .blg {
+        min-width: 220px;
+    }
+
+    .prop {
+        margin-bottom: 4px;
+        min-width: 45%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .left_text h1 {
+        font-size: 35px;
+    }
+
+    .left_text h1 span {
+        line-height: 35px
+    }
+
+    .header_button {
+        flex-direction: column-reverse;
+        position: relative;
+        gap: 10px;
+        min-width: 100px;
+    }
+
+    .search_basket {
+        min-width: 100px;
+    }
+
+    .burger_menu.active_burger+.nav {
+        top: 120px;
+    }
+
+    .blogs .blg_card .blg {
+        min-width: 200px;
+    }
+
+    .register_header {
+        width: 90%;
+    }
+
+    .register_main {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .register_main input {
+        width: 96%;
+        /* align-items: center; */
+    }
+
+    .register_main button {
+        width: 96%;
+    }
+
+    .custom_check_icon_password {
+        right: 2px;
+    }
+
+    .prop {
+        min-width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    html .home_page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .burger_menu {
+        /* order: 1; */
+        margin: 10px;
+        position: absolute;
+        left: 10px;
+        top: 46px;
+    }
+
+    .burger_menu.active_burger+.nav {
+        top: 140px;
+        left: 20px;
+    }
+
+    .blogs .blg_card .blg {
+        width: 90%;
+    }
+
+    .burger_menu.active_burger+.left_menu {
+        width: 80%;
+    }
+
+    .home_page header {
+        width: 95%;
+    }
+
+    .home_page main {
+        width: 95%;
+    }
+
+    .home_page footer {
+        width: 95%;
+    }
+
+    .home_page .logo_nav_login {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .home_page .logo_nav_login .header_button {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        min-width: 100%;
+    }
+
+    .sort {
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .right_list .sort_link {
+        width: 100%;
+    }
+
+    .right_list .sort_list {
+        flex-direction: row;
+        margin-top: 10px;
+    }
+
+    .right_list .card {
+        width: 46%;
+    }
+
+    .prop img {
+        width: 150%;
+        vertical-align: bottom;
+
+        z-index: 1;
+    }
+
+    .prop .prop_text {
+        z-index: 2;
+    }
+
+    .about_blok {
+        min-width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .about_newsletter>img {
         display: none;
     }
 
-    @media screen and (max-width: 800px) {
-        .burger_menu {
-            display: block;
-            order: -1;
-        }
-        .burger_menu.active_burger + .nav{
-            position: absolute;
-            display: block;
-            top: 90px;
-        }
-    
-        .burger_menu.active_burger + .nav nav {
-            background-color: #EDF6EE; 
-            width: 90px;  
-            padding: 5px;     
-        }
-
-        .burger_menu.active_burger + .nav nav li {
-            padding: 6px 0;
-        }
-    
-        .burger_menu.active_burger + .nav nav .header_main_menu {
-            flex-direction: column;
-        }
-
-        .burger_menu.active_burger + .nav nav .menu_2 {
-            top: 0;
-            left: 100%;
-        }
-
-        .burger_menu.active_burger + .nav nav .menu_2 .menu_3 {
-            left: 0;
-            top: 100%;
-        }
-
-        .burger_menu.active_burger + .nav nav .menu_2 li {
-            padding: 6px;
-        }
-
-        .nav nav .menu_2 li svg {
-            transform: rotate(90deg);
-        }
-
-        .nav nav .menu_2 li:hover svg {
-            transform: rotate(-90deg);
-        }
-    
-        .burger_menu + .nav {
-            display: none;
-        }
-        
-        .top {
-            flex-direction: column;
-        }
-        .left_text,.right_img {
-            width: 100%;
-        }
-
-        .burger_menu + .left_menu {
-            display: none;
-        }
-
-        .right_list {
-            width: 90%;
-        }
-
-        .sale_banner {
-            display: none;
-        }
-
-        .card.sale_banner {
-            display: block;
-            width: 60%;
-            order: 1;
-        }
-
-        .main_content {
-            justify-content: space-between;
-        }
-
-        .sort_link {
-            gap: 12px
-        }
-
-        .sort_list {
-            flex-direction: column;
-        }
-
-        .main_content {
-            position: relative;
-        }
-
-        .burger_menu.active_burger + .left_menu{
-            position: absolute;
-            display: block;
-            z-index: 10;
-            top: 12px;
-            width: 50%;
-        }
-
-        .burger_menu.active_burger + .left_menu .menu {
-            background-color: #f5f5f5;
-        }
-        .contacts {
-            justify-content: flex-start;
-            text-align: start;
-            flex-direction: column;
-        }
-        .contacts .location {
-            margin: 5px 0;
-            margin-left: 0;
-        }
-
-        .contacts .message {
-            margin: 5px 0;
-            margin-left: 0;
-        }
-
-        .contacts .calling {
-            margin: 5px 0;
-            margin-left: 0;
-        }
-
-        .newsletter {
-            margin-top: 15px;
-            min-width: 100%;
-        }
-
-        .about_newsletter {
-            padding: 2px;
-        } 
-
-        .navigation_social {
-            gap: 12px;
-        }
-
-        .blogs .blg_card {
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        .blogs .blg_card .blg{
-            min-width: 220px;
-        }
-
-        .prop {
-            margin-bottom: 4px;
-            min-width: 45%;
-        }
-
-      }
-
-      @media screen and (max-width: 600px) {
-        .left_text h1 {
-            font-size: 35px;
-        }
-        .left_text h1 span {
-            line-height: 35px
-        }
-        .header_button {
-            flex-direction: column-reverse;
-            position: relative;
-            gap: 10px;
-            min-width: 100px;
-        }
-        .search_basket {
-            min-width: 100px;
-        }
-
-        .burger_menu.active_burger + .nav {
-            top: 120px;
-        }
-
-        .blogs .blg_card .blg{
-            min-width: 200px;
-        }
-
-        .register_header {
-            width: 90%;
-        }
-
-        .register_main {
-            width: 90%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .register_main input {
-            width: 96%;
-            /* align-items: center; */
-        }
-
-        .register_main button {
-            width: 96%;
-        }
-
-        .custom_check_icon_password {
-            right: 2px;
-        } 
-
-        .prop {
-            min-width: 100%;
-        }
-        
-      }
-      @media screen and (max-width: 450px){
-        html .home_page {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header .burger_menu {
-            /* order: 1; */
-            margin: 10px;
-            position: absolute;
-            left: 10px;
-            top: 46px;
-        }
-
-        .burger_menu.active_burger + .nav {
-            top: 140px;
-            left: 20px;
-        }
-
-        .blogs .blg_card .blg{
-            width: 90%;
-        }
-
-        .burger_menu.active_burger + .left_menu {
-            width: 80%;
-        }
-
-        .home_page header {
-            width: 95%;
-        }
-
-        .home_page main {
-            width: 95%;
-        }
-
-        .home_page footer {
-            width: 95%;
-        }
-
-        .home_page .logo_nav_login {
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-        }
-
-        .home_page .logo_nav_login .header_button {
-            flex-wrap: nowrap;
-            flex-direction: row;
-            min-width: 100%;
-        }
-
-        .sort {
-            flex-wrap: wrap;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .right_list .sort_link  {
-            width: 100%;
-        }
-
-        .right_list .sort_list {
-            flex-direction: row;
-            margin-top: 10px;
-        }
-
-        .right_list .card{
-            width: 46%;
-        }
-
-        .prop img {
-            width: 150%;
-            vertical-align: bottom;
-
-            z-index: 1;
-        }
-
-        .prop .prop_text {
-            z-index: 2;
-        }
-
-        .about_blok {
-            min-width: 100%;
-            padding-bottom: 20px;
-        }
-
-        .about_newsletter>img {
-            display: none;
-        }
-
-        .contacts {
-            margin-top: 20px;
-        }
-      }
+    .contacts {
+        margin-top: 20px;
+    }
+}
