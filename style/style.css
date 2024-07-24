@@ -1542,6 +1542,25 @@ footer hr {
     display: none;
 }
 
+.contact_bx {
+    display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+    .contact_bx {
+        justify-content: space-around;
+    }
+    .contact_bx .location {
+        margin: 0;
+    }
+    .contact_bx .message {
+        margin: 0;
+    }
+    .contact_bx .calling {
+        margin: 0;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .burger_menu {
         display: block;
@@ -1650,9 +1669,17 @@ footer hr {
     }
 
     .contacts {
-        justify-content: flex-start;
-        text-align: start;
         flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact_bx {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contacts .contact_box {
+        min-width: 90%;
     }
 
     .contacts .location {
