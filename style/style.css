@@ -27,7 +27,12 @@ button {
     transition: 0.5s ease;
 }
 
+hr {
+    border: 0.3px solid #46A35880;
+}
+
 /* --- registration page style --- */
+
 
 .registration .preloader::after {
     bottom: 50%;
@@ -38,11 +43,19 @@ button {
     width: 500px;
     margin: 0 auto;
     position: relative;
+    text-align: center;
 }
 
 .register_main {
     width: 500px;
     margin: 0 auto;
+    
+}
+
+.registration {
+    text-align: center;
+    margin: 0;
+    padding: 8px;
 }
 
 .close_img {
@@ -74,15 +87,6 @@ h1 {
 .alternative_register button img {
     width: 20px;
     height: 20px;
-}
-
-.registration {
-    text-align: center;
-}
-
-.register_footer {
-    height: 10px;
-    background-color: #46A358;
 }
 
 .alternative_register button {
@@ -139,7 +143,7 @@ a {
 
 .register_form input {
     font-family: "Cera Pro", "Times New Roman";
-    margin: 7.5px;
+    margin-top: 14px;
     width: 300px;
     height: 40px;
     font-size: 14px;
@@ -183,7 +187,8 @@ a {
     height: 22px;
     position: absolute;
     cursor: pointer;
-    top: calc(50% - 11px);
+    top: calc(50% - 4px);
+    /* top: 50%; */
     right: calc(50% - 150px);
     background-image: url("../img/icon/password_control.svg");
     background-size: contain;
@@ -194,12 +199,6 @@ a {
     background: radial-gradient(#52C368, #FFFFFF);
     border-radius: 50%;
 }
-
-/* .password svg {
-    position: absolute;
-    top: 20px;
-    right: 110px;
-} */
 
 /* --- index page style --- */
 
@@ -1570,13 +1569,23 @@ footer hr {
         .burger_menu.active_burger + .nav nav .menu_2 {
             top: 0;
             left: 100%;
-            padding: 6px;
         }
 
         .burger_menu.active_burger + .nav nav .menu_2 .menu_3 {
             left: 0;
             top: 100%;
+        }
+
+        .burger_menu.active_burger + .nav nav .menu_2 li {
             padding: 6px;
+        }
+
+        .nav nav .menu_2 li svg {
+            transform: rotate(90deg);
+        }
+
+        .nav nav .menu_2 li:hover svg {
+            transform: rotate(-90deg);
         }
     
         .burger_menu + .nav {
@@ -1604,6 +1613,8 @@ footer hr {
 
         .card.sale_banner {
             display: block;
+            width: 60%;
+            order: 1;
         }
 
         .main_content {
@@ -1655,8 +1666,12 @@ footer hr {
 
         .newsletter {
             margin-top: 15px;
-            width: 100%;
+            min-width: 100%;
         }
+
+        .about_newsletter {
+            padding: 2px;
+        } 
 
         .navigation_social {
             gap: 12px;
@@ -1672,6 +1687,7 @@ footer hr {
 
         .prop {
             margin-bottom: 4px;
+            min-width: 45%;
         }
 
       }
@@ -1700,15 +1716,53 @@ footer hr {
         .blogs .blg_card .blg{
             min-width: 200px;
         }
+
+        .register_header {
+            width: 90%;
+        }
+
+        .register_main {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .register_main input {
+            width: 96%;
+            /* align-items: center; */
+        }
+
+        .register_main button {
+            width: 96%;
+        }
+
+        .custom_check_icon_password {
+            right: 2px;
+        } 
+
+        .prop {
+            min-width: 100%;
+        }
         
       }
       @media screen and (max-width: 450px){
-        html {
+        html .home_page {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header .burger_menu {
+            /* order: 1; */
+            margin: 10px;
+            position: absolute;
+            left: 10px;
+            top: 46px;
         }
 
         .burger_menu.active_burger + .nav {
-            top: 130px;
+            top: 140px;
+            left: 20px;
         }
 
         .blogs .blg_card .blg{
@@ -1717,5 +1771,73 @@ footer hr {
 
         .burger_menu.active_burger + .left_menu {
             width: 80%;
+        }
+
+        .home_page header {
+            width: 95%;
+        }
+
+        .home_page main {
+            width: 95%;
+        }
+
+        .home_page footer {
+            width: 95%;
+        }
+
+        .home_page .logo_nav_login {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .home_page .logo_nav_login .header_button {
+            flex-wrap: nowrap;
+            flex-direction: row;
+            min-width: 100%;
+        }
+
+        .sort {
+            flex-wrap: wrap;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .right_list .sort_link  {
+            width: 100%;
+        }
+
+        .right_list .sort_list {
+            flex-direction: row;
+            margin-top: 10px;
+        }
+
+        .right_list .card{
+            width: 46%;
+        }
+
+        .prop img {
+            width: 150%;
+            vertical-align: bottom;
+
+            z-index: 1;
+        }
+
+        .prop .prop_text {
+            z-index: 2;
+        }
+
+        .about_blok {
+            min-width: 100%;
+            padding-bottom: 20px;
+        }
+
+        .about_newsletter>img {
+            display: none;
+        }
+
+        .contacts {
+            margin-top: 20px;
         }
       }
