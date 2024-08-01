@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.body_homepage {
+  height: 100vh;
+  background: linear-gradient(to left bottom, #323264 0%, #323264 60%, #643E72 100%);
+  background-image: url(../img/icons/background_symbol.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
 
 /*# sourceMappingURL=style.css.map */
