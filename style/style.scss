@@ -1,5 +1,12 @@
 // --- colors ---
-$gradient-color-supersoft: linear-gradient(to left bottom, #323264 0%, #323264 60%, #643E72 100%);
+$color-base-white: #fff;
+$color-base-black: #000;
+$color-accent: #F0145A;
+$color-main-regular: #323264;
+$color-main-alt: #46466E;
+$color-main-soft: #686887;
+
+$color-gradient-supersoft: linear-gradient(to left bottom, #323264 0%, #323264 60%, #643E72 100%);
 
 
 // --- all settings ---
@@ -14,20 +21,44 @@ $gradient-color-supersoft: linear-gradient(to left bottom, #323264 0%, #323264 6
 
 .body_homepage {
     height: 100vh;
-    background: $gradient-color-supersoft, url(../img/icons/background_symbol.svg) no-repeat;
-    // background-image: 
-    // background-repeat: no-repeat;
-    // background-position: 50% 0;
-    // position: relative;
+    width: 100%;
+    background: $color-gradient-supersoft;
 
-    // ::before {
-    //     position: absolute;
-    //     content: "";
-    //     background: url("../img/icons/background_symbol.svg");
-    //     background-repeat: no-repeat;
-    //     width: 100%;
-    //     height: 100vh;
-    //     background-position: 50% 0;
-    // }
+    &::before {
+        position: absolute;
+        content: "";
+        background: url("../img/icons/background_symbol.svg");
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-position: 50% 0;
+        z-index: -1;
+    }
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    width: 83.333%;
+    margin: 0 auto;
+}
+
+.header__contacts-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.contacts-nav__contacts{
+    display: flex;
+}
+
+.nav__nav-list {
+    display: flex;
+}
+
+.nav-list__nav-link {
+    list-style: none;
+}
