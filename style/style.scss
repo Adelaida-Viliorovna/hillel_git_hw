@@ -14,10 +14,10 @@ $gradient-color-supersoft: linear-gradient(to left bottom, #323264 0%, #323264 6
 
 .body_homepage {
     height: 100vh;
-    background: $gradient-color-supersoft;
-    background-image: url(../img/icons/background_symbol.svg);
-    background-repeat: no-repeat;
-    background-position: 50% 0;
+    background: $gradient-color-supersoft, url(../img/icons/background_symbol.svg) no-repeat;
+    // background-image: 
+    // background-repeat: no-repeat;
+    // background-position: 50% 0;
     // position: relative;
 
     // ::before {
