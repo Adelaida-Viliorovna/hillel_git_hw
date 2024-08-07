@@ -26,14 +26,16 @@ html {
 
 .bg-gradient {
   background: linear-gradient(to left bottom, #323264 0%, #323264 60%, #643E72 100%);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .bg-h {
   background-image: url(../img/icons/background_symbol.svg);
   background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;
   background-position: 50% 0;
+  background-size: 872.34px;
 }
 
 .dark .header__language-btn .btn {
@@ -70,7 +72,6 @@ html {
   padding-top: 50px;
   width: 83.333%;
   margin: 0 auto;
-  z-index: 2;
 }
 .header__contacts-nav {
   display: flex;
@@ -139,6 +140,7 @@ html {
   position: relative;
   margin: 15px 7px;
   display: none;
+  cursor: pointer;
 }
 .header__burger-menu::after {
   content: "";
@@ -154,18 +156,108 @@ html {
   position: absolute;
   top: -6px;
 }
+.header .close-btn {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  align-self: flex-end;
+  display: none;
+  cursor: pointer;
+}
+.header .close-btn::after {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 50%;
+  height: 2px;
+  width: 26px;
+  background-color: #EC6F5D;
+  transform: rotate(45deg);
+}
+.header .close-btn::before {
+  content: "";
+  left: -9px;
+  top: 50%;
+  position: absolute;
+  height: 2px;
+  width: 26px;
+  background-color: #EC6F5D;
+  transform: rotate(-45deg);
+}
+
+.dark .main__h1-text {
+  color: #fff;
+}
+
+.main__h1-text {
+  font-size: 38px;
+  font-weight: bold;
+  padding-top: 360px;
+  padding-bottom: 405px;
+  text-align: center;
+}
+.main__scroll-btn {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.main__scroll-btn:hover {
+  border-color: #F0145A;
+}
+.main__scroll-btn:hover svg path {
+  stroke: #F0145A;
+}
+
+.section-info__shadow-1 {
+  height: 10px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  background-color: #CACADB;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.section-info__shadow-2 {
+  height: 10px;
+  width: calc(100% - 80px);
+  margin: 0 auto;
+  background-color: #E7E7F2;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
 
 @media screen and (max-width: 1440px) {
   .header {
     width: 91.667%;
   }
+  .main__h1-text {
+    padding-top: 260px;
+    padding-bottom: 305px;
+  }
+  .bg-h {
+    background-size: 698px;
+  }
 }
 @media screen and (max-width: 1024px) {
+  .bg-h {
+    background-size: 670px;
+  }
   .header {
     width: 88.281%;
   }
+  .main__h1-text {
+    padding-top: 245px;
+    padding-bottom: 290px;
+  }
 }
 @media screen and (max-width: 768px) {
+  .bg-h {
+    background-size: 894px;
+  }
   .header {
     width: 84.375%;
     flex-direction: column;
@@ -182,10 +274,14 @@ html {
   .header__nav {
     padding-top: 30px;
   }
+  .main__h1-text {
+    padding-top: 270px;
+    padding-bottom: 416px;
+  }
 }
 @media screen and (max-width: 580px) {
   .bg-h {
-    background-size: 150%;
+    background-size: 524px;
   }
   .header {
     width: 100%;
@@ -222,10 +318,47 @@ html {
     display: none;
   }
   .header__nav {
-    display: none;
+    position: absolute;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    border-radius: 12px;
+    gap: 20px;
+    justify-content: center;
+    padding: 12px;
+    background-color: #fff;
+    left: 500%;
+    top: 150px;
+  }
+  .header__nav .nav-link {
+    background: #F5F5FA;
+    border-radius: 12px;
+    padding: 7px 0px;
+    color: #24A3FF;
+  }
+  .header__nav .nav-link:hover {
+    color: #F0145A;
+    border: transparent;
+  }
+  .header__nav .close-btn {
+    display: block;
+  }
+  .header .active-link {
+    background-color: #E6E6F0;
+    border: transparent;
+    pointer-events: none;
   }
   .header__logo {
     padding-top: 15px;
+  }
+  .dark .header__nav .nav-link {
+    color: #24A3FF;
+  }
+  .main__h1-text {
+    padding-top: 130px;
+    padding-bottom: 158px;
+    width: 84%;
+    margin: 0 auto;
   }
 }
 

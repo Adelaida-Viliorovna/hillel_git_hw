@@ -72,13 +72,15 @@ html {
 }
 .bg-gradient {
     background: $color-gradient-supersoft;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .bg-h {
     background-image: url(../img/icons/background_symbol.svg);
     background-repeat: no-repeat;
     width: 100%;
-    height: 100vh;
     background-position: 50% 0;
+    background-size: 872.34px;
 }
 
 .dark .header {
@@ -127,7 +129,6 @@ html {
     padding-top: 50px;
     width: 83.333%;
     margin: 0 auto;
-    z-index: 2;
 
     &__contacts-nav {
         display: flex;
@@ -211,6 +212,7 @@ html {
         position: relative;
         margin: 15px 7px;
         display: none;
+        cursor: pointer;
         &::after{
             content: "";
             width: 18px;
@@ -226,10 +228,87 @@ html {
             top: -6px;
         }
     }
+
+    .close-btn {
+        width: 18px;
+        height: 18px;
+        position: relative;
+        align-self: flex-end;
+        display: none;
+        cursor: pointer;
+        &::after {
+            content: "";
+            position: absolute;
+            left: -9px;
+            top: 50%;
+            height: 2px;
+            width: 26px;
+            background-color: #EC6F5D;
+            transform: rotate(45deg);
+        }
+        &::before {
+            content: "";
+            left: -9px;
+            top: 50%;
+            position: absolute;
+            height: 2px;
+            width: 26px;
+            background-color: #EC6F5D;
+            transform: rotate(-45deg);
+        }
+        
+    }
+}
+.dark .main {
+    &__h1-text {
+        color: $color-base-white;
+    }
+}
+.main {
+    &__h1-text {
+        font-size: 38px;
+        font-weight: bold;
+        padding-top: 360px;
+        padding-bottom: 405px;
+        text-align: center;
+    }
+    &__scroll-btn {
+        border: 2px solid $color-base-white;
+        border-radius: 50%;
+        width: 42px;
+        height: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        &:hover {
+            border-color: $color-accent;
+            svg {
+                path {
+                    stroke: $color-accent;
+                }
+            }
+        }
+    }
 }
 
-.main {
-
+.section-info {
+    &__shadow-1{
+        height: 10px;
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        background-color: #CACADB;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    &__shadow-2{
+        height: 10px;
+        width: calc(100% - 80px);
+        margin: 0 auto;
+        background-color: #E7E7F2;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
 }
 
 
@@ -237,15 +316,36 @@ html {
     .header {
         width: 91.667%;
     }
+    .main {
+        &__h1-text {
+            padding-top: 260px;
+            padding-bottom: 305px;
+        }
+    }
+    .bg-h {
+        background-size: 698px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
+    .bg-h {
+        background-size: 670px;
+    }
     .header {
         width: 88.281%;
+    }
+    .main {
+        &__h1-text {
+            padding-top: 245px;
+            padding-bottom: 290px;
+        }
     }
 }
 
 @media screen and (max-width: 768px) {
+    .bg-h {
+        background-size: 894px;
+    }
     .header {
         width: 84.375%;
         flex-direction: column;
@@ -265,17 +365,18 @@ html {
             padding-top: 30px;
         }
     }
+    .main {
+        &__h1-text {
+            padding-top: 270px;
+            padding-bottom: 416px;
+        }
+    }
 }
 @media screen and (max-width: 580px) 
 // @media screen and (max-width: 375px) 
 {
-    // .body_homepage {
-    //     &::before {
-            // background-size: 150%;
-    //     }
-    // }
     .bg-h {
-        background-size: 150%;
+        background-size: 524px;
     }
 
     .header {
@@ -312,10 +413,52 @@ html {
             display: none;
         }
         &__nav {
-            display: none;
+            position: absolute;
+            flex-direction: column;
+            text-align: center;
+            width: 90%;
+            border-radius: 12px;
+            gap: 20px;
+            justify-content: center;
+            padding: 12px;
+            background-color: $color-base-white;
+            left: 500%;
+            top: 150px;
+            .nav-link {
+                background: $color-grey-bg;
+                border-radius: 12px;
+                padding: 7px 0px;
+                color: $color-active-regular;
+                &:hover {
+                    color: $color-accent;
+                    border: transparent;
+                }
+            }
+            .close-btn {
+                display: block;
+            }
         }
+        .active-link {
+            background-color: $color-grey-separator;
+            border: transparent;
+            pointer-events: none;
+        }
+        
         &__logo {
             padding-top: 15px;
+        }
+    }
+
+    .dark .header__nav .nav-link {
+        color: $color-active-regular;
+    }
+
+    .main {
+        &__h1-text {
+            padding-top: 130px;
+            padding-bottom: 158px;
+            width: 84%;
+            margin: 0 auto;
         }
     }
 }
