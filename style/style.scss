@@ -344,6 +344,7 @@ html {
         width: 83%;
         padding-top: 60px;
         margin: 0 auto;
+        padding-bottom: 60px;
     }
     &__services-main-link {
         font-size: 14px;
@@ -369,6 +370,36 @@ html {
         background: $color-gradient-red-text;
         -webkit-background-clip: text;
         color: transparent;
+    }
+    &__services-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__services-item {
+        padding-top: 60px;
+        width: 30.8%;
+    }
+    &__services-item-link {
+
+        &:hover {
+            .main__services-item-h3{
+                color: $color-accent;
+            } 
+        }
+    }
+    &__services-item-h3 {
+        padding-top: 30px;
+        padding-bottom: 15px;
+        font-size: 22px;
+        font-weight: bold;
+        color: $color-active-regular;
+    }
+    &__services-item-text{
+        color: $color-base-white;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 26px;
     }
 }
 
@@ -410,6 +441,13 @@ html {
         }
         &__features-description {
             width: 53.8%;
+        }
+
+        &__services {
+            width: 91.67%;
+        }
+        &__services-item {
+            width: 27.78%;
         }
     }
     .bg-h {
