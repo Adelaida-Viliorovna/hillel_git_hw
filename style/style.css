@@ -212,6 +212,52 @@ html {
 .main__scroll-btn:hover svg path {
   stroke: #F0145A;
 }
+.main__features-section {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 90px;
+  width: 70.83%;
+  margin: 0 auto;
+  align-items: center;
+}
+.main__features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: end;
+  width: 27.57%;
+}
+.main__feature-item {
+  font-size: 38px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #B3B3BA;
+}
+.main__feature-item:hover {
+  color: #F0145A;
+}
+.main .active-item {
+  font-weight: bold;
+  background: linear-gradient(to right, #EF8080 0%, #F0145A 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  pointer-events: none;
+}
+.main__features-description {
+  width: 63.31%;
+}
+.main__feature-h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  padding-bottom: 30px;
+}
+.main__feature-text {
+  font-size: 19px;
+  font-weight: normal;
+  color: #fff;
+  line-height: 30px;
+}
 
 .section-info__shadow-1 {
   height: 10px;
@@ -237,6 +283,15 @@ html {
   .main__h1-text {
     padding-top: 260px;
     padding-bottom: 305px;
+  }
+  .main__features-section {
+    width: 75%;
+  }
+  .main__features-list {
+    width: 34.72%;
+  }
+  .main__features-description {
+    width: 53.8%;
   }
   .bg-h {
     background-size: 698px;
