@@ -460,6 +460,24 @@ html {
     width: 84%;
     margin: 0 auto;
   }
+  .main__features-section {
+    padding-top: 60px;
+  }
+  .main__features-list {
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 30px;
+  }
+  .main__feature-item {
+    font-size: 30px;
+  }
+  .main__features-description {
+    width: 84%;
+    padding-top: 30px;
+  }
+  .main__feature-h2 {
+    font-size: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
