@@ -258,6 +258,36 @@ html {
   color: #fff;
   line-height: 30px;
 }
+.main__services {
+  display: flex;
+  flex-direction: column;
+  width: 83%;
+  padding-top: 60px;
+  margin: 0 auto;
+}
+.main__services-main-link {
+  font-size: 14px;
+  color: #24A3FF;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5.5px;
+  text-decoration: none;
+}
+.main__services-main-link:hover {
+  color: #F0145A;
+}
+.main__services-main-link:hover svg path {
+  stroke: #F0145A;
+}
+.main__services-main-h2 {
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 38px;
+  background: linear-gradient(to right, #F0145A 0%, #EF8080 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
 .section-info__shadow-1 {
   height: 10px;

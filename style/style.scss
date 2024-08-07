@@ -338,6 +338,38 @@ html {
         line-height: 30px;
     }
     
+    &__services {
+        display: flex;
+        flex-direction: column;
+        width: 83%;
+        padding-top: 60px;
+        margin: 0 auto;
+    }
+    &__services-main-link {
+        font-size: 14px;
+        color: $color-active-regular;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5.5px;
+        text-decoration: none;
+        &:hover {
+            color: $color-accent;
+            svg {
+                path{
+                    stroke: $color-accent;
+                }
+            }
+        }
+    }
+    &__services-main-h2 {
+        padding-top: 10px;
+        font-weight: bold;
+        font-size: 38px;
+        background: $color-gradient-red-text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
 }
 
 .section-info {
