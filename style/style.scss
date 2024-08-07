@@ -397,6 +397,16 @@ html {
             padding-top: 245px;
             padding-bottom: 290px;
         }
+
+        &__features-section {
+            width: 88.28%;
+        }
+        &__features-list {
+            width: 41.48%;
+        }
+        &__features-description {
+            width: 44.8%;
+        }
     }
 }
 
@@ -427,6 +437,43 @@ html {
         &__h1-text {
             padding-top: 270px;
             padding-bottom: 416px;
+        }
+
+        &__features-section {
+            width: 100%;
+            flex-direction: column;
+        }
+        &__features-list {
+            width: 100%;
+            padding-left: 7.81%;
+            padding-right: 7.81%;
+            padding-bottom: 60px;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+        }
+        &__feature-item {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+        }
+        &__features-description {
+            width: 84.37%;
+            padding-top: 64px;
+            position: relative;
+            &::before {
+                content: "";
+                width: 100%;
+                height: 4px;
+                background-color: rgba(255, 255, 255, 0.3);
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+        &__vertical-line {
+            display: none;
         }
     }
 }
