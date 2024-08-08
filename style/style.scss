@@ -381,7 +381,7 @@ html {
         width: 30.8%;
     }
     &__services-item-link {
-
+        text-decoration: none;
         &:hover {
             .main__services-item-h3{
                 color: $color-accent;

@@ -298,6 +298,9 @@ html {
   padding-top: 60px;
   width: 30.8%;
 }
+.main__services-item-link {
+  text-decoration: none;
+}
 .main__services-item-link:hover .main__services-item-h3 {
   color: #F0145A;
 }
