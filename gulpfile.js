@@ -19,7 +19,7 @@ gulp.task('webp', async function() {
     const webp = await loadWebp();
     return gulp.src('app/img/*.jpg')
            .pipe(webp())
-           .pipe(gulp.dest('dist/images'));
+           .pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('watch', function() {
