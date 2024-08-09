@@ -44,6 +44,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat";
 }
 
 
@@ -312,6 +313,7 @@ html {
         font-weight: bold;
         text-decoration: none;
         color: $color-grey-text;
+        
         &:hover {
             color: $color-accent;
         }

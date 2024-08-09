@@ -2,13 +2,13 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: normal;
-  src: local("Montserrat Regular"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  src: local("Montserrat Regular"), url("../../app/fonts/Montserrat-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: bold;
-  src: local("Montserrat Bold"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  src: local("Montserrat Bold"), url("../../app/fonts/Montserrat-Bold.woff") format("woff");
 }
 html {
   font-family: "Montserrat";
@@ -18,6 +18,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat";
 }
 
 .body-homepage {
