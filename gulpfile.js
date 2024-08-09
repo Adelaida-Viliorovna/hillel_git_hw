@@ -3,6 +3,8 @@ const { series } = gulp;
 const cssnano = require('gulp-cssnano');
 const sass = require('gulp-sass')(require('sass'));
 
+const svgSprite = require('gulp-svg-sprite');
+
 async function loadWebp() {
     const webp = await import('gulp-webp');
     return webp.default; // для сумісності з ESM
@@ -20,6 +22,27 @@ gulp.task('webp', async function() {
     return gulp.src('app/img/*.jpg')
            .pipe(webp())
            .pipe(gulp.dest('dist/img'));
+});
+
+gulp.task('svg-sprite', function() {
+    return gulp.src('app/img/icons/*.svg') // Шлях до ваших SVG-файлів
+        .pipe(svgSprite({
+            mode: {
+                symbol: {
+                    sprite: "../sprite.svg", // Ім'я спрайту та місце його збереження
+                    example: false
+                }
+            },
+            shape: {
+                id: {
+                    separator: '-',
+                    generator: function(name) {
+                        return name.replace(/^.*[\\\/]/, '').replace('.svg', '');
+                    }
+                }
+            }
+        }))
+        .pipe(gulp.dest('dist/img/icons')); // Кінцева папка для спрайту
 });
 
 gulp.task('watch', function() {
