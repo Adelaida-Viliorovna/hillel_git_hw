@@ -307,8 +307,14 @@ html {
         gap: 30px;
         text-align: end;
         width: 27.57%;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
     }
     &__feature-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        white-space: nowrap;
         font-size: 38px;
         font-weight: bold;
         text-decoration: none;
