@@ -51,4 +51,7 @@ gulp.task('watch', function() {
 
     // Спостерігає за додаванням нових .jpg файлів і виконує 'webp'
     gulp.watch('app/img/*.jpg', gulp.series('webp'));
+
+    // Спостерігає за додаванням або зміною SVG-файлів і виконує 'svg-sprite'
+    gulp.watch('app/img/icons/*.svg', gulp.series('svg-sprite'));
 });
