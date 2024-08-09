@@ -530,6 +530,7 @@ html {
             flex-direction: row;
             flex-wrap: nowrap;
             overflow-x: scroll;
+            justify-content: flex-start;
         }
         &__feature-item {
             display: flex;
