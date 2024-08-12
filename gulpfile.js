@@ -20,7 +20,7 @@ gulp.task('sass', function() {
 gulp.task('webp', async function() {
     const webp = await loadWebp();
     return gulp.src('app/img/*.jpg')
-           .pipe(webp({ quality: 80 }).on('error', console.error))
+           .pipe(webp())
            .pipe(gulp.dest('dist/img'));
 });
 
