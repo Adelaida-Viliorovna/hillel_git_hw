@@ -485,6 +485,14 @@ html {
         align-items: center;
         gap: 5.5px;
         padding-bottom: 5px;
+        &:hover {
+            color: $color-accent;
+            svg {
+                path{
+                    stroke: $color-accent;
+                }
+            }
+        }
     }
     &__slide-h2 {
         font-size: 38px;
@@ -566,6 +574,92 @@ html {
     .client-12 {
         background-color: #000000;
     }
+
+    &__publications {
+        background-color: $color-grey-bg;
+    }
+    &__public {
+        width: 83%;
+        margin: 0 auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid $color-grey-separator;
+    }
+    &__public-link {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        color: $color-active-regular;
+        padding-bottom: 10px;
+        
+        &:hover {
+            color: $color-accent;
+            svg {
+                path{
+                    stroke: $color-accent;
+                }
+            }
+        }
+    }
+    &__public-h2 {
+        font-size: 38px;
+        font-weight: bold;
+        background: $color-gradient-red-text;
+        -webkit-background-clip: text;
+        color: transparent;
+        padding-bottom: 30px;
+    }
+    &__public-grid {
+        display: flex;
+        justify-content: space-between;
+
+        .public-item {
+            width: 32%;
+            background-color: $color-base-white;
+            border-radius: 8px;
+            overflow: hidden;
+
+            &__img {
+                width: 100%;
+                height: 200px;
+                overflow: hidden;
+                object-fit: cover;
+            }
+        }
+        .public-text {
+            padding: 30px;
+        }
+        .public-link {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: $color-active-regular;
+            
+        }
+        .public-date {
+            font-size: 12px;
+            font-weight: bold;
+            color: $color-grey-text;
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+        .public-line {
+            font-size: 4px;
+            color: $color-grey-separator;
+            background-color: $color-grey-separator;
+        }
+        .public-paragraph {
+            font-size: 14px;
+            line-height: 22px;
+            color: $color-base-black;
+            padding-top: 15px;
+        }
+    }
+
     
 }
 
@@ -612,6 +706,15 @@ html {
             width: 69.6%;
         }
         
+        &__clients-grid {
+            width: 100%;
+            border-radius: 0;
+            margin-bottom: 0;
+        }
+
+        &__public {
+            width: 91.67%;
+        }
     }
 }
 
@@ -658,6 +761,10 @@ html {
         }
         &__slide-text {
             width: 55.75%;
+        }
+
+        &__public {
+            width: 88.28%;
         }
         
     }
@@ -757,6 +864,25 @@ html {
         }
         &__slide-text {
             width: 100%;
+        }
+
+        &__client {
+            width: 33.333%;
+        }
+
+        &__public {
+            width: 84.38%;
+        }
+        &__public-grid{
+            flex-wrap: wrap;
+        }
+        .pub-1,
+        .pub-2{
+            width: 47.68%;
+        }
+        .pub-3{
+            width: 100%;
+            margin-top: 30px;
         }
     }
 }
@@ -901,6 +1027,26 @@ html {
         }
         &__slide-h2 {
             font-size: 30px;
+        }
+
+        &__client {
+            width: 100%;
+        }
+
+        &__public {
+            width: 84%;
+        }
+        &__public-grid{
+            gap: 30px;
+        }
+        &__public-h2 {
+            font-size: 30px;
+        }
+        .public-item {
+            width: 100%;
+        }
+        .pub-3{
+            margin: 0;
         }
     }
 }
