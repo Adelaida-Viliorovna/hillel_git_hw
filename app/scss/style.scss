@@ -826,6 +826,14 @@ html {
         display: flex;
         flex-direction: column;
     }
+    .input {
+        &:focus {
+            border: 1px solid #24A3FF;
+        }
+        // &:invalid {
+        //     border: 1px solid #FF0000;
+        // }
+    }
     &__name {
         padding: 15px;
         border: none;
@@ -877,6 +885,12 @@ html {
         font-weight: bold;
         color: $color-base-white;
         box-shadow: 0 0 20px rgba($color: #24A3FF, $alpha: 0.5);
+        &:hover {
+            background-color: $color-active-hover;
+        }
+        &:active {
+            background-color: $color-active-active;
+        }
     }
 
 }
@@ -1025,6 +1039,15 @@ html {
         }
     }
 
+    .main_contact-page {
+        &__contact {
+            width: 35.41%;
+        }
+        &__form {
+            width: 35.41%;
+        }
+    }
+
     .footer {
         &__content {
             width: 91.67%;
@@ -1092,6 +1115,15 @@ html {
         }
         &__card {
             width: 28.87%;
+        }
+    }
+
+    .main_contact-page {
+        &__contact {
+            width: 41.21%;
+        }
+        &__form {
+            width: 41.21%;
         }
     }
 
@@ -1227,6 +1259,18 @@ html {
         }
         &__card {
             width: 45.37%;
+        }
+    }
+
+    .main_contact-page {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__contact {
+            width: 84.37%;
+        }
+        &__form {
+            width: 84.37%;
         }
     }
 
@@ -1414,6 +1458,15 @@ html {
         }
         &__card {
             width: 100%;
+        }
+    }
+
+    .main_contact-page {
+        &__contact {
+            width: 84%;
+        }
+        &__form {
+            width: 84%;
         }
     }
 
