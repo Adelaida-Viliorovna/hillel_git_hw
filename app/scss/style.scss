@@ -216,12 +216,14 @@ html {
         margin: 15px 7px;
         display: none;
         cursor: pointer;
+        background-color: $color-main-regular;
         &::after{
             content: "";
             width: 18px;
             height: 2px;
             position: absolute;
             top: 6px;
+            background-color: $color-main-regular;
         }
         &::before {
             content: "";
@@ -229,6 +231,7 @@ html {
             height: 2px;
             position: absolute;
             top: -6px;
+            background-color: $color-main-regular;
         }
     }
 
@@ -649,9 +652,11 @@ html {
             padding-top: 15px;
         }
         .public-line {
-            font-size: 4px;
+            height: 4px;
             color: $color-grey-separator;
             background-color: $color-grey-separator;
+            color: $color-grey-separator;
+            border: none;
         }
         .public-paragraph {
             font-size: 14px;
@@ -659,9 +664,221 @@ html {
             color: $color-base-black;
             padding-top: 15px;
         }
+    } 
+}
+
+.main_team-page {
+    &__h1 {
+        width: 70.83%;
+        margin: 0 auto;
+        padding-top: 60px;
+        background: $color-gradient-red-text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 38px;
+        font-weight: bold;
+        padding-bottom: 60px;
     }
 
-    
+    &__grid {
+        width: 83%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__card {
+        width: 30.83%;
+        padding-bottom: 60px;
+    }
+    &__card-img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+    &__card-info {
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__card-text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    &__card-h4 {
+        color: $color-main-regular;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        &:hover {
+            color: $color-accent;
+        }
+    }
+    &__card-p {
+        line-height: 22px;
+        font-size: 14px;
+        color: $color-grey-text;
+    }
+    &__card-btn {
+        border: none;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-grey-bg;
+        &:hover {
+            background-color: $color-grey-bg-alt;
+            .arrow {
+                path {
+                    stroke: $color-accent;
+                }
+            }
+        }
+    }
+}
+
+.main_contact-page {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__contact {
+        width: 33.84%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__address {
+        line-height: 30px;
+        font-size: 21px;
+        font-weight: normal;
+        color: $color-main-regular;
+    }
+    &__horisontal-line {
+        height: 4px;
+        background-color: $color-grey-separator;
+        color: $color-grey-separator;
+        border: none;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    &__phone {
+        text-decoration: none;
+        line-height: 30px;
+        font-size: 21px;
+        font-weight: normal;
+        color: $color-main-regular;
+    }
+    &__mail {
+        text-decoration: none;
+        line-height: 30px;
+        font-size: 21px;
+        font-weight: normal;
+        color: $color-active-regular;
+        padding-top: 15px;
+        &:hover {
+            color: $color-accent;
+        }
+    }
+    &__facebook-link {
+        text-decoration: none;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        &:hover {
+            path {
+                fill: $color-accent;
+            }
+            .main_contact-page__facebook-text {
+                color: $color-accent;
+            }
+        }
+    }
+    &__facebook-text {
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 16px;
+        color: $color-active-regular;
+    }
+
+    &__form {
+        width: 33.84%;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        border-radius: 12px;
+        background-color: $color-grey-bg;
+    }
+    &__h1 {
+        background: $color-gradient-red-text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 30px;
+        font-weight: bold;
+        padding-bottom: 30px;
+    }
+    &__contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+    &__name {
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        background-color: $color-base-white;
+        color: $color-grey-text;
+        margin-bottom: 15px;
+        height: 56px;
+    }
+    &__message {
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        background-color: $color-base-white;
+        color: $color-grey-text;
+        margin-bottom: 30px;
+    }
+    &__label {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $color-grey-text;
+        margin-bottom: 15px;
+    }
+    &__contact-phone {
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        background-color: $color-base-white;
+        color: $color-grey-text;
+        margin-bottom: 15px;
+        height: 56px;
+    }
+    &__contact-mail {
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        background-color: $color-base-white;
+        color: $color-grey-text;
+        margin-bottom: 30px;
+        height: 56px;
+    }
+    &__form-btn {
+        border: none;
+        border-radius: 12px;
+        background-color: $color-active-regular;
+        height: 56px;
+        font-size: 16px;
+        font-weight: bold;
+        color: $color-base-white;
+        box-shadow: 0 0 20px rgba($color: #24A3FF, $alpha: 0.5);
+    }
+
 }
 
 .footer {
@@ -796,6 +1013,18 @@ html {
         }
     }
 
+    .main_team-page {
+        &__h1 {
+            width: 75%;
+        }
+        &__grid {
+            width: 91.67%;
+        }
+        &__card {
+            width: 30.3%;
+        }
+    }
+
     .footer {
         &__content {
             width: 91.67%;
@@ -852,6 +1081,18 @@ html {
             width: 88.28%;
         }
         
+    }
+
+    .main_team-page {
+        &__h1 {
+            width: 64.84%;
+        }
+        &__grid {
+            width: 88.28%;
+        }
+        &__card {
+            width: 28.87%;
+        }
     }
 
     .footer {
@@ -974,6 +1215,18 @@ html {
         .pub-3{
             width: 100%;
             margin-top: 30px;
+        }
+    }
+
+    .main_team-page {
+        &__h1 {
+            width: 84.375%;
+        }
+        &__grid {
+            width: 84.375%;
+        }
+        &__card {
+            width: 45.37%;
         }
     }
 
@@ -1148,6 +1401,19 @@ html {
         }
         .pub-3{
             margin: 0;
+        }
+    }
+
+    .main_team-page {
+        &__h1 {
+            width: 84%;
+            font-size: 30px;
+        }
+        &__grid {
+            width: 84%;
+        }
+        &__card {
+            width: 100%;
         }
     }
 
