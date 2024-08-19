@@ -122,6 +122,9 @@ html {
   background-color: #F0145A;
   pointer-events: none;
 }
+.header__language-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 .header__location {
   font-weight: normal;
   font-size: 16px;
@@ -491,7 +494,6 @@ html {
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
-  border-bottom: 2px solid #E6E6F0;
 }
 .section-info__public-link {
   text-transform: uppercase;
@@ -777,6 +779,16 @@ html {
   background-color: #006CCF;
 }
 
+.main_publications-page {
+  background-color: #F5F5FA;
+  text-decoration: none;
+  padding: 30px 0 60px 0;
+}
+.main_publications-page__content {
+  width: 83%;
+  margin: 0 auto;
+}
+
 .footer {
   background-color: #F5F5FA;
   text-decoration: none;
@@ -785,6 +797,7 @@ html {
   fill: #F0145A;
 }
 .footer__content {
+  border-top: 2px solid #E6E6F0;
   width: 83%;
   margin: 0 auto;
   padding-top: 30px;

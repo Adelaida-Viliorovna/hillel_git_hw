@@ -186,6 +186,10 @@ html {
             background-color: $color-accent;
             pointer-events: none;
         }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
     }
 
     &__location {
@@ -587,7 +591,7 @@ html {
         margin: 0 auto;
         padding-top: 30px;
         padding-bottom: 30px;
-        border-bottom: 2px solid $color-grey-separator;
+        // border-bottom: 2px solid $color-grey-separator;
     }
     &__public-link {
         text-transform: uppercase;
@@ -895,9 +899,21 @@ html {
 
 }
 
+.main_publications-page {
+    background-color: $color-grey-bg;
+    text-decoration: none;
+    padding: 30px 0 60px 0;
+
+    &__content {
+        width: 83%;
+        margin: 0 auto;
+    }
+}
+
 .footer {
     background-color: $color-grey-bg;
     text-decoration: none;
+
 
     &__facebook-link {
         &:hover {
@@ -908,6 +924,7 @@ html {
     }
 
     &__content {
+        border-top: 2px solid $color-grey-separator;
         width: 83%;
         margin: 0 auto;
         padding-top: 30px;
