@@ -5,6 +5,9 @@ const sass = require('gulp-sass')(require('sass'));
 
 const svgSprite = require('gulp-svg-sprite');
 
+const cleanCSS = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
+
 async function loadWebp() {
     const webp = await import('gulp-webp');
     return webp.default; // для сумісності з ESM
@@ -55,3 +58,18 @@ gulp.task('watch', function() {
     // Спостерігає за додаванням або зміною SVG-файлів і виконує 'svg-sprite'
     gulp.watch('app/img/icons/*.svg', gulp.series('svg-sprite'));
 });
+
+gulp.task('minify-css', () => {
+    return gulp.src('app/scss/style.scss')
+      .pipe(cleanCSS())
+      .pipe(gulp.dest('dist/css'));
+  });
+  
+  // Мінімізація JS
+  gulp.task('minify-js', () => {
+    return gulp.src('index.js')
+      .pipe(uglify())
+      .pipe(gulp.dest('dist/js'));
+  });
+  
+  gulp.task('default', gulp.series('minify-css', 'minify-js'));

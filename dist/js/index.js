@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".section-info__team-slider").slick({dots:!0,infinite:!0})});
