@@ -11,83 +11,46 @@
   src: local("Montserrat Bold"), url("../../app/fonts/Montserrat-Bold.woff") format("woff");
 }
 html {
-  font-family: "Montserrat";
+  font-family: "Montserrat" !important;
+}
+
+p {
+  margin-bottom: 0;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat";
+  /* font-family: "Montserrat" !important; */
   transition: 0.5s ease;
 }
 
-.body-homepage {
-  width: 100%;
-}
 
-.bg-gradient {
-  background: linear-gradient(to left bottom, #323264 0%, #323264 60%, #643E72 100%);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.bg-h {
-  background-image: url(../../app/img/icons/background_symbol.svg);
-  background-repeat: no-repeat;
-  width: 100%;
-  background-position: 50% 0;
-  background-size: 872.34px;
-}
-
-.dark .header__language-btn .btn {
-  color: #fff;
-}
-.dark .header__language-btn .btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.dark .header__location {
-  color: #fff;
-}
-.dark .header__phone {
-  color: #fff;
-}
-.dark .header__nav .nav-link {
-  color: #fff;
-}
-.dark .header__nav .nav-link:hover {
-  border-bottom: 2px solid #fff;
-}
-.dark .header__burger-menu {
-  background-color: #fff;
-}
-.dark .header__burger-menu::after {
-  background-color: #fff;
-}
-.dark .header__burger-menu::before {
-  background-color: #fff;
-}
 
 .header {
-  display: flex;
-  justify-content: space-between;
+  display: flex !important; 
+  justify-content: space-between !important;
   padding-top: 50px;
   width: 83.333%;
   margin: 0 auto;
 }
 .header__contacts-nav {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   align-items: flex-end;
   gap: 16px;
 }
 .header__contacts {
-  display: flex;
+  display: flex !important;
   align-items: center;
   gap: 6px;
 }
+.header__contacts p {
+	margin-bottom: 0;
+}
 .header__nav {
-  display: flex;
+  display: flex !important;
   gap: 15px;
 }
 .header__nav .nav-link {
@@ -106,7 +69,7 @@ html {
   border-bottom: 2px solid #F0145A;
   pointer-events: none;
 }
-.header__language-btn .btn {
+.header__language-btn .my-btn {
   font-weight: bold;
   font-size: 12px;
   background-color: transparent;
@@ -116,6 +79,7 @@ html {
   width: 33px;
   height: 25px;
   cursor: pointer;
+  text-align:center;
 }
 .header__language-btn .active-btn {
   color: #fff;
@@ -782,7 +746,9 @@ html {
 .main_publications-page {
   background-color: #F5F5FA;
   text-decoration: none;
-  padding: 30px 0 60px 0;
+ padding: 30px 0 60px 0;
+  height:100%;
+  margin-top: 60px;
 }
 .main_publications-page__content {
   width: 83%;
@@ -810,6 +776,7 @@ html {
   flex-direction: column;
   gap: 20px;
 }
+
 .footer__location {
   display: flex;
   gap: 10px;
@@ -817,6 +784,7 @@ html {
   flex-wrap: nowrap;
 }
 .footer__address {
+  margin-bottom: 0;
   font-size: 16px;
   font-weight: normal;
   color: #323264;
@@ -1301,4 +1269,92 @@ html {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/* --- --- publications page main content --- --- */
+
+.main_publications-page .container {
+  font-family: "Montserrat" !important;
+}
+.main_publications-page .container .card-title {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: bold;
+  color: #24A3FF;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+.main_publications-page .container .card-title:hover {
+  color: #F0145A;
+}
+
+.main_publications-page .container .card-date {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #B3B3BA;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  border-bottom: 4px solid #E6E6F0;
+}
+
+.main_publications-page .container .card-text {
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 22px;
+  padding-top: 15px;
+}
+
+.main_publications-page .container .card {
+  border: none;
+  border-radius: 8px;
+  
+}
+
+.main_publications-page .container .card-body {
+  padding: 30px;
+}
+
+.main_publications-page .container .btn-group {
+  height: 42px;
+  border: none;
+  border-radius: 12px;
+  background-color: #E6E6F0;
+  align-items: center;
+}
+.main_publications-page .container .btn {
+  border: 2px solid #E6E6F0;
+  border-radius: 10px;
+  height: 38px;
+  background: transparent;
+  padding: 6px 30px 10px;
+  margin: 0;
+  align-self: center;
+  color: #323264;
+  font-size: 16px;
+  font-weight: bold;
+}
+.main_publications-page .container .btn.active {
+  background-color: #fff;
+}
+
+.main_publications-page .container .btn-primary {
+  height: 56px;
+  border: none;
+  background-color: #24A3FF;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 16px 30px;
+  box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+}
+
+.main_publications-page .container .card-img-top {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+/* .main_publications-page .container */
